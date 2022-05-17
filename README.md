@@ -1,2 +1,2 @@
-# Study_BAEKJOON
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+백준 문제 풀이입니다.
+Kotlin을 제 2외국어로 사용합니다.
