@@ -1,0 +1,1 @@
+fun main() { for(num in readln().toInt() downTo 1) println(num)}
