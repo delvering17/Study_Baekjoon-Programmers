@@ -1,0 +1,1 @@
+fun main() {for (i in 1..readln().toInt()) println(readln().let{(it[0]-'0')+(it[2]-'0')})}
