@@ -7,14 +7,12 @@ fun main() {
     var coin = K
     var cnt = 0
     while(true) {
-//        println ("$coin - ${cal(arr,coin)}")
         if(coin-cal(arr,coin) < 0) {
            break
         }
         else {
             cnt++
             coin -= cal(arr,coin)
-
         }
     }
     println(cnt)
@@ -42,5 +40,4 @@ fun cal(arr : List<Int>, num : Int) : Int {
     else {
         return arr[low-1]
     }
-
 }
