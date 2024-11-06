@@ -1,19 +1,10 @@
+import java.util.stream.Collectors;
+
 class Solution {
     
     public String solution(String rsp) {
-        String[] split = rsp.split("");
-
-        StringBuilder sb = new StringBuilder();
-        for (String str : split) {
-            sb.append(convert(str));
-        }
-
-        return sb.toString();
-    }
-
-    private String convert(String str) {
-        if (str.equals("0")) return "5";
-        if (str.equals("5")) return "2";
-        return "0";
+        return rsp.chars()
+            .mapToObj(ch -> ch == '2' ? "0" : ch == '0' ? "5" : "2")
+            .collect(Collectors.joining());
     }
 }
