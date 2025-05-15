@@ -1,22 +1,26 @@
 class Solution {
+    
     int answer = 0;
     
     public int solution(int[] numbers, int target) {
-        func(numbers, 0, target, 0);
-        
+        dfs(numbers, 0, 0, target);
         return answer;
     }
     
-    public void func(int[] numbers, int index, int target, int sum) {
-        if (index == numbers.length) {
-            if (target == sum) {
-                answer ++;
+    public void dfs(int[] numbers, int result, int depth, int target) {
+        // 결과 확인
+        if (depth == numbers.length) {
+            if (target == result) {
+                answer++;
             }
             return;
         }
-        
-        func(numbers, index + 1, target, sum + numbers[index]);
-        func(numbers, index + 1, target, sum - numbers[index]);
+            
+        // 재귀
+        dfs(numbers, result + numbers[depth], depth + 1, target);
+        dfs(numbers, result - numbers[depth], depth + 1, target);
     }
+    
+    
     
 }
