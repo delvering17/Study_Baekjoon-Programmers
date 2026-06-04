@@ -1,0 +1,25 @@
+WITH MILK_CARTS AS (
+    SELECT
+        CART_ID
+    FROM
+        CART_PRODUCTS
+    WHERE
+        NAME = 'Milk'
+), YOGURT_CARTS AS (
+    SELECT
+        CART_ID
+    FROM
+        CART_PRODUCTS
+    WHERE
+        NAME = 'Yogurt'
+)
+SELECT
+    M.CART_ID
+FROM MILK_CARTS AS M
+INNER JOIN
+    YOGURT_CARTS AS Y
+    ON M.CART_ID = Y.CART_ID
+GROUP BY
+    M.CART_ID
+ORDER BY
+    M.CART_ID
