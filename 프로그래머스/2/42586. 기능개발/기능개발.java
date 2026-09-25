@@ -15,7 +15,7 @@ class Solution {
                 result.add(count);
                 count = 0;
             }
-            if (remainProgress < 0) {
+            if (remainProgress <= 0) {
                 count++;
                 continue;
             }
